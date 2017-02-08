@@ -43,7 +43,7 @@ on early-init
     write /sys/module/msm_performance/parameters/max_cpu_freq "0:1344000 1:1344000 2:1344000 3:1344000 4:1536000 5:1536000 6:1536000 7:1536000"
 
 on init
-    export LD_SHIM_LIBS "/system/lib64/libgui.so|/system/lib64/libgui_shim.so:/system/lib/libgui.so|/system/lib/libgui_shim.so"
+    export LD_SHIM_LIBS "/system/lib64/libgui.so|/system/lib64/libgui_shim.so:/system/lib/libgui.so|/system/lib/libgui_shim.so:/system/lib/hw/camera.qcom.so|/system/lib/camera.qcom_shim.so"
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist/data 0700 system system
